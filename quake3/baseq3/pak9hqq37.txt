@@ -1,0 +1,7 @@
+This is High Quality Quake [HQQ] for Quake III Arena
+Point Release 1.32
+
+Version: 3.7 - 20210517
+Q3A:     baseq3\pak9hqq37.pk3
+Authour: ZerTerO
+www:     www.moddb.com/mods/high-quality-quake
