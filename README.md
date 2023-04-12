@@ -9,7 +9,7 @@ How to setup Quake III in 2023, and use it on 4k HD screens with all the things.
     - [Some random place in internet](https://steamunlocked.net/quake-3-arena-free-download/)
     - [Internet Archive](https://archive.org/details/quake-3-arena)
 
-2. Get the latest zip in the RELEASES section, and uncompress the files in the Quake3 installation. Then, go to the [Configuration](#configuration) section. The latest patches are included (Quake3e (08-04-2023 version), HQQ 3.7 and
+2. Get the latest zip in the [RELEASES](https://github.com/juanmcasillas/quakeIII_2023/releases/) section, and uncompress the files in the Quake3 installation. Then, go to the [Configuration](#configuration) section. The latest patches are included (Quake3e (08-04-2023 version), HQQ 3.7 and
 Flexible HUD release 7)
 
 
