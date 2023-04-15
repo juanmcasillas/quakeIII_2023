@@ -54,3 +54,53 @@ Ok, you have set all files using [Fast installation](#fast_inst) or [Manual Inst
 * For Quake III standard edition: `q3.bat`
 * For Quake III Arena: `q3_arena.bat`
 
+## Server config
+
+### Set the `server.cfg` file options
+
+In order to start a dedicated server, we need to edit somethings in the `baseq3/server.cfg` file:
+
+* `seta rconpassword "secret"      // sets RCON password for remote console`
+* The game mode (`seta g_gametype 4`)
+    - 0: deathmatch (free for all)
+    - 1: one on one (tournament)
+    - 2: not available in multiplayer
+    - 3: team deathmatch
+    - 4: capture the flag
+
+By default, the server is configured as *deathmatch (FFA)*, with *10* minutes of timelimit and *100* frags max.
+
+### Configure the launcher (`q3_server.bat`) arguments
+
+Then, we need the *command line launcher* `q3_server.bat`
+
+```bash
+.\quake3e.ded.x64 +set dedicated 1 +set net_port 27969 +com_hunkMegs 1024 +exec server.cfg
+```
+
+* Start the server as `dedicated`, but *don't announce it in ID servers (2)*
+* Set the net_port to `27969`
+* Set the mem to 1 GB
+* Run the config script
+
+### Set the NAT in your router / firewall.
+
+Just set a NAT rule from the PUBLIC ip the local IP of the computer running your quake3 server. In my case:
+
+- `NAT port 27969/tcp to 192.168.100.203 27969/tcp`
+- `NAT port 27969/udp to 192.168.100.203 27969/udp`
+
+Then start the server.
+
+* Server: `q3_server.bat`
+
+### Test the configuration
+
+1. Go to `Multiplayer` option menu
+2. Set `Server: Local`
+3. Click on `Specify`
+4. Type the public ip or dns name in `Address:` field
+5. Type the port (`27969`) in `Port:` field
+6. Press `Fight` button
+
+After you connect, you can go to menu pressing `ESC`, press `Server Info` and you can add the server to the *favorites* using `ADD TO FAVORITES` so next time, you only have to select `Server: Favorites` and click it.
